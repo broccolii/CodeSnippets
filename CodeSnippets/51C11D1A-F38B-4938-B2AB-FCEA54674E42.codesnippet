@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>shareInstance</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>+ (instancetype)shareInstance {
+    static &lt;#Class name#&gt; *instance = nil;
+    static dispatch_once_t oneToken;
+    dispatch_once(&amp;oneToken, ^{
+        instance = [[&lt;#Class name#&gt;  alloc] init];
+    });
+    return instance;
+}
+
++ (id)allocWithZone:(struct _NSZone *)zone {
+    return [&lt;#Class name#&gt; shareInstance];
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>51C11D1A-F38B-4938-B2AB-FCEA54674E42</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Quick</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ShareInstance</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
